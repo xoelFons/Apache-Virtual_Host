@@ -1,11 +1,12 @@
 **Parte 1: _Docker compose_**
 
+
 Para el docker compose, usaremos de plantilla uno que ya tengamos hecho, este docker compose debe tener un servidor apache, un servidor DNS y un cliente para hacer las pruebas.
 
 
 El docker compose debe quedar algo así: 
 
-services:
+**_services:_**
 
   **servidor_apache:**
 
@@ -83,8 +84,33 @@ services:
         ipv4_address: 33.33.5.33
 
 
-networks:
+**networks:**
 
-  red_33:
+  **red_33:**
 
     external: true
+
+
+
+
+**Parte 2: _Databases_**
+
+
+Despues de tener ya una red creada y conectada para esta práctica, vamos a crear y vincular unas bases de datos con el servidor apache, con la finalidad de que nos lo proporcione el servidor DNS.
+
+Va a haber 2 databases: _fabulaoscura_ y _fabulamaravillosa_, pero solo pondré una de ellas, ya que es la misma db con distintos nombres.
+
+
+$TTL 38400	; 10 hours 40 minutes
+@		IN SOA	ns.fabulamaravillosa.int. some.email.address. (
+				10000002   ; serial
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				38400      ; minimum (10 hours 40 minutes)
+				)
+@		IN NS	ns.fabulamaravillosa.int.
+ns  	IN A		33.33.5.14
+test	IN A		33.33.5.34
+www 	IN CNAME	ns
+texto	IN TXT		mensaje
