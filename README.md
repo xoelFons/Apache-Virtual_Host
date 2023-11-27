@@ -1,4 +1,4 @@
-**Parte 1: _Docker compose_**
+# **Parte 1: _Docker compose_**
 
 
 Para el docker compose, usaremos de plantilla uno que ya tengamos hecho, este docker compose debe tener un servidor apache, un servidor DNS y un cliente para hacer las pruebas.
@@ -93,7 +93,7 @@ El docker compose debe quedar algo así:
 
 
 
-**Parte 2: _Databases_**
+# **Parte 2: _Databases_**
 
 
 Despues de tener ya una red creada y conectada para esta práctica, vamos a crear y vincular unas bases de datos con el servidor apache, con la finalidad de que nos lo proporcione el servidor DNS.
@@ -125,4 +125,5 @@ test	IN A		33.33.5.34
 www 	IN CNAME	ns
 
 texto	IN TXT		mensaje
+
 
