@@ -102,6 +102,7 @@ Va a haber 2 databases: _fabulaoscura_ y _fabulamaravillosa_, pero solo pondré 
 
 
 $TTL 38400	; 10 hours 40 minutes
+
 @		IN SOA	ns.fabulamaravillosa.int. some.email.address. (
 
 				10000002   ; serial
@@ -118,7 +119,10 @@ $TTL 38400	; 10 hours 40 minutes
 
 @		IN NS	ns.fabulamaravillosa.int.
 ns  	IN A		33.33.5.14
+
 test	IN A		33.33.5.34
+
 www 	IN CNAME	ns
+
 texto	IN TXT		mensaje
 
