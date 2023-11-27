@@ -7,7 +7,7 @@ El docker compose debe quedar algo así:
 
 services:
 
-  servidor_apache:
+  **servidor_apache:**
 
     container_name: asir_apache_web
 
@@ -31,7 +31,7 @@ services:
 
         ipv4_address: 33.33.5.14
 
-  servidor_dns:
+  **servidor_dns:**
 
     container_name: asir_servidor_dns
 
@@ -59,7 +59,8 @@ services:
 
       #Para mapear los directorios
 
-  cliente:
+  **cliente:**
+  
 
     container_name: asir_cliente_web
 
