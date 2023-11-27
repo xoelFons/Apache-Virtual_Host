@@ -138,15 +138,19 @@ Si tenemos todo completamente configurado, entraremos en el cliente e instalarem
 En el archivo httpd.conf buscamos la línea en la que pone ***listen 80*** y pegamos las siguientes líneas:
 
 <VirtualHost *:80>
+
     DocumentRoot /usr/local/apache2/htdocs/www1
+
     ServerName www.fabulamaravillosa.int
 
-    # Other directives here
+    
 </VirtualHost>
 
 <VirtualHost *:80>
+
     DocumentRoot /usr/local/apache2/htdocs/www2
+    
     ServerName www.fabulaoscura.int
 
-    # Other directives here
+    
 </VirtualHost>
