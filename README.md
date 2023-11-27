@@ -127,3 +127,7 @@ www 	IN CNAME	ns
 texto	IN TXT		mensaje
 
 
+
+# **Parte 3: _Comprobación DIG_**
+
+Si tenemos todo completamente configurado, entraremos en el cliente e instalaremos DIG con _dnsutils_, si lo tenemos correctamente al hacer el comando ***dig 33.33.5.14 test.fabulamaravillosa.int*** debeía dar respuesta.
