@@ -133,20 +133,37 @@ texto	IN TXT		mensaje
 Si tenemos todo completamente configurado, entraremos en el cliente e instalaremos DIG con _dnsutils_, si lo tenemos correctamente al hacer el comando ***dig 33.33.5.14 test.fabulamaravillosa.int*** debeía dar respuesta.
 
 
-# **Parte 4: _Añadiendo el virtual host_**
+# **Parte 4.1: _Añadiendo virtual host_**
 
 En el archivo httpd.conf buscamos la línea en la que pone ***listen 80*** y pegamos las siguientes líneas:
 
-<VirtualHost *:80>
+**<VirtualHost *:80>**
 
     DocumentRoot /usr/local/apache2/htdocs/www1
 
     ServerName www.fabulamaravillosa.int
 </VirtualHost>
 
-<VirtualHost *:80>
+**<VirtualHost *:80>**
 
     DocumentRoot /usr/local/apache2/htdocs/www2
 
     ServerName www.fabulaoscura.int
 </VirtualHost>
+
+
+# **Parte 4.2: _Colocar HTMLs_**
+
+Depende de la ruta que hayas metido en el archivo httpd.conf de la anterior parte, que tiene que ser la misma ruta del apache, tienes que crear ciertas carpetas para poner los ***index.html*** dentro, con la finalidad de comprobar su funcionamiento.
+ 
+En este caso, las carpetas _www1_ y _www2_ son las carpetas donde se van a meter los archivos de HTML.
+
+# **Parte 5: _Comprobación_**
+
+Para acabar, entraremos en una consola del cliente, haremos ***apk update*** y luego instalaremos _lynx_ con el comando ***apk add lynx***.
+ 
+Después usaremos lynx con el siguiente comando:
+
+***lynx www.fabulaoscura.int:80***
+
+Si al pulsar enter te devuelve el contenido html relacionado con esa database, ya estaría hecho.
