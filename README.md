@@ -131,3 +131,22 @@ texto	IN TXT		mensaje
 # **Parte 3: _Comprobación DIG_**
 
 Si tenemos todo completamente configurado, entraremos en el cliente e instalaremos DIG con _dnsutils_, si lo tenemos correctamente al hacer el comando ***dig 33.33.5.14 test.fabulamaravillosa.int*** debeía dar respuesta.
+
+
+# **Parte 4: _Añadiendo el virtual host_**
+
+En el archivo httpd.conf buscamos la línea en la que pone ***listen 80*** y pegamos las siguientes líneas:
+
+<VirtualHost *:80>
+    DocumentRoot /usr/local/apache2/htdocs/www1
+    ServerName www.fabulamaravillosa.int
+
+    # Other directives here
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot /usr/local/apache2/htdocs/www2
+    ServerName www.fabulaoscura.int
+
+    # Other directives here
+</VirtualHost>
