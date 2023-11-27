@@ -142,7 +142,6 @@ En el archivo httpd.conf buscamos la línea en la que pone ***listen 80*** y peg
     DocumentRoot /usr/local/apache2/htdocs/www1
 
     ServerName www.fabulamaravillosa.int
-
 </VirtualHost>
 
 <VirtualHost *:80>
@@ -150,5 +149,4 @@ En el archivo httpd.conf buscamos la línea en la que pone ***listen 80*** y peg
     DocumentRoot /usr/local/apache2/htdocs/www2
 
     ServerName www.fabulaoscura.int
-
 </VirtualHost>
