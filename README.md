@@ -6,6 +6,7 @@ Para el docker compose, usaremos de plantilla uno que ya tengamos hecho, este do
 El docker compose debe quedar algo así: 
 
 services:
+
   servidor_apache:
 
     container_name: asir_apache_web
